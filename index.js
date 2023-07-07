@@ -1,5 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
+
+//call the variable of the environment
 require('dotenv').config()
 
 //Rute to files of the archive routers

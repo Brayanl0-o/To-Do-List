@@ -1,17 +1,22 @@
 const { default: mongoose } = require('mongoose')
+
+//Use the models forlder and the users file to import the task models
 const User = require('../models/users')
 
-
+//Function defined to store the asynchronous User CRUD functions
 const controllerUser = {
     create: async (req, res) => {
         try {
             const first_name = req.body.first_name
             const last_name = req.body.last_name
             const age = req.body.age
+            const createDate = req.body.createDate
+            //Wait to receive the created user with the promise
             await User.create({
                 first_name: first_name,
                 last_name: last_name,
-                age: age
+                age: age,
+                createDate: createDate
             }).then(console.log('User created'))
             res.json({ msg: 'created' })
         } catch (error) {
@@ -41,10 +46,13 @@ const controllerUser = {
             const first_name = req.body.first_name
             const last_name = req.body.last_name
             const age = req.body.age
+            const createDate = req.body.createDate
+            //Updaete the user with the provided ID
             await User.findByIdAndUpdate(id, {
                 first_name: first_name,
                 last_name: last_name,
-                age: age
+                age: age,
+                createDate: createDate
             })
             res.json({ msg: 'update' })
         } catch (error) {
@@ -63,5 +71,5 @@ const controllerUser = {
 
 }
 
-
+//Exports the function mostly controllerUser
 module.exports = controllerUser

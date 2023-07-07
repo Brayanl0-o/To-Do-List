@@ -16,7 +16,14 @@ const UserSchema = new Schema({
         type: Number,
         require: true,
         maxLength: 2
+    },
+    createDate: {
+        type: Date,
+        default: Date.now
     }
+
 })
+// Create a new const to hold the model with the new Schema
+// and defined users for create a new collection in the database
 const user = mongoose.model("users", UserSchema)
 module.exports = user
