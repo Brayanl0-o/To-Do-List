@@ -21,7 +21,9 @@ const TaskSchema = new Schema({
     status: {
         type: String,
         require: true,
-        maxLength: 100
+        enum: ['pending', 'in Progress', 'completed'],
+        lowercase: true
+
     },
     deadline: {
         type: Date,

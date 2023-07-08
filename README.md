@@ -1,6 +1,6 @@
 ### To-Do-List
 This is an API REST for a To-Do List that allows adding, updating, get and delete tasks and users.
-                        ![Alt text](image-4.png)
+                        ![Alt text](img/image-4.png)
       
 ## Users
 # Create a User
@@ -10,13 +10,13 @@ This is an API REST for a To-Do List that allows adding, updating, get and delet
         • firstName (string): Nane of the user.
         • lastName (string): Last nameof the user.
         • age (number): Age of the user.
-![Alt text](image-7.png)
+![Alt text](img/image-7.png)
                         
 
 # Get all Users
     Method: GET
     Ruta: /api/users
-![Alt text](image-8.png)
+![Alt text](img/image-8.png)
 
 
 # Get a specific User
@@ -52,12 +52,12 @@ This is an API REST for a To-Do List that allows adding, updating, get and delet
         • deadline (string): Deadline of the task (format: YYYY-MM-DD).
         • createDate (string): Creation date of the task (format: YYYY-MM-DD).
 
-![Alt text](image-5.png)
+![Alt text](img/image-5.png)
 
 # Get all Tasks
     Method: GET
     Route: /api/tasks
-![Alt text](image-6.png)
+![Alt text](img/image-6.png)
 
 # Get a specific Task
     Method: GET

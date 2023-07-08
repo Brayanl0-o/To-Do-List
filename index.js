@@ -18,7 +18,7 @@ app.use('/api/tasks', tasksRouters)
 app.use('/api/users', usersRouters)
 
 app.get('/', (req, res) => {
-    res.send('Holaa!! ')
+    res.send('Holaa!! Estas conenctado a la API To-Do List ')
 })
 
 //Connection with MondoDB
