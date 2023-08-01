@@ -1,6 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
-
+const cors = require('cors');
 //call the variable of the environment
 require('dotenv').config()
 
@@ -9,10 +9,14 @@ const tasksRouters = require('./routers/tasks');
 const usersRouters = require('./routers/users');
 
 const port = 3010
-const app = express()
+const app = express();
 
 
 //middlewares
+app.use(cors({
+    origin: 'http://localhost:4200'
+}));
+
 app.use(express.json())
 app.use('/api/tasks', tasksRouters)
 app.use('/api/users', usersRouters)
