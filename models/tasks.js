@@ -10,18 +10,23 @@ const TaskSchema = new Schema({
     name_user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
-        require: true,
+        required: true,
         maxLength: 100
+    },
+    name_task: {
+        type: String,
+        required: true,
+        maxLength: 150
     },
     description: {
         type: String,
-        require: true,
+        required: true,
         maxLength: 200
     },
     status: {
         type: String,
-        require: true,
-        enum: ['pending', 'in Progress', 'completed'],
+        required: true,
+        enum: ['pending', 'in progress', 'completed'],
         lowercase: true
 
     },

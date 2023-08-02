@@ -11,10 +11,13 @@ const usersRouters = require('./routers/users');
 const port = 3010
 const app = express();
 
-
+const allowedOrigins = [
+    'http://localhost:4200',
+    'http://localhost:59762'
+];
 //middlewares
 app.use(cors({
-    origin: 'http://localhost:4200'
+    origin: allowedOrigins
 }));
 
 app.use(express.json())
